@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Giriş Yap</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .login-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 320px; text-align: center; }
+        h2 { color: #333; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #218838; }
+        .links { margin-top: 20px; font-size: 14px; display: flex; flex-direction: column; gap: 10px; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .forgot-pass { color: #dc3545; } /* Şifremi unuttum kırmızımsı olsun */
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Giriş Yap</h2>
+        <form>
+            <input type="email" placeholder="E-posta Adresiniz" required>
+            <input type="password" placeholder="Şifre" required>
+            <button type="submit">Giriş Yap</button>
+        </form>
+        
+        <div class="links">
+            <a href="kayit.html">Hesabın yok mu? <b>Kayıt Ol</b></a>
+            
+            <a href="sifre-unuttum.html" class="forgot-pass">Şifremi Unuttum?</a>
+        </div>
+    </div>
+</body>
+</html>
