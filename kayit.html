@@ -1,1 +1,118 @@
-<h1<Kyıt Ekranı </h1>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güvenli Kayıt Ekranı</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9ecef;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+            font-weight: 500;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Padding taşmasını engeller */
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            background-color: #3498db;
+            color: white;
+            padding: 14px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        .error-message {
+            color: #e74c3c;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            display: none; /* Başlangıçta gizli */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hesap Oluştur</h2>
+        <form id="kayitFormu" onsubmit="return dogrula(event)">
+            
+            <label for="ad">Ad Soyad</label>
+            <input type="text" id="ad" name="ad" placeholder="Adınız Soyadınız" required>
+
+            <label for="email">E-posta</label>
+            <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+
+            <label for="sifre">Şifre</label>
+            <input type="password" id="sifre" name="sifre" placeholder="****" required>
+
+            <label for="sifre_tekrar">Şifre Tekrar</label>
+            <input type="password" id="sifre_tekrar" name="sifre_tekrar" placeholder="****" required>
+
+            <div id="hataMesaji" class="error-message"> Şifreler eşleşmiyor!</div>
+
+            <button type="submit">Kayıt Ol</button>
+        </form>
+    </div>
+
+    <script>
+        function dogrula(event) {
+            // Şifreleri al
+            var sifre1 = document.getElementById("sifre").value;
+            var sifre2 = document.getElementById("sifre_tekrar").value;
+            var hataKutusu = document.getElementById("hataMesaji");
+
+            // Kontrol et
+            if (sifre1 !== sifre2) {
+                // Eşleşmezse hata göster ve göndermeyi durdur
+                hataKutusu.style.display = "block";
+                event.preventDefault(); // Formun gönderilmesini engeller
+                return false;
+            } else {
+                // Eşleşirse hata mesajını gizle ve devam et (Burada alert ile simüle ediyoruz)
+                hataKutusu.style.display = "none";
+                alert("Kayıt Başarılı! (Simülasyon)");
+                return true; 
+            }
+        }
+    </script>
+
+</body>
+</html>
