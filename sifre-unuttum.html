@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Şifre Sıfırlama</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f2f5; margin: 0; }
+        .reset-box { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 8px 16px rgba(0,0,0,0.1); width: 320px; text-align: center; }
+        h2 { color: #333; margin-bottom: 10px; }
+        p { color: #666; font-size: 14px; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #e67e22; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #d35400; }
+        .links { margin-top: 20px; font-size: 14px; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="reset-box">
+        <h2>Şifremi Unuttum</h2>
+        <p>Hesabınıza kayıtlı e-posta adresinizi girin, size sıfırlama bağlantısı gönderelim.</p>
+        
+        <form onsubmit="alert('Sıfırlama bağlantısı gönderildi! (Simülasyon)'); return false;">
+            <input type="email" placeholder="E-posta Adresiniz" required>
+            <button type="submit">Bağlantı Gönder</button>
+        </form>
+        
+        <div class="links">
+            <a href="giris.html">← Giriş Yap'a Dön</a>
+        </div>
+    </div>
+</body>
+</html>
